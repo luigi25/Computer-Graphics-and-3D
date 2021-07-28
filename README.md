@@ -1,1 +1,1 @@
-# CG3D
+# Computer Graphics and 3D
