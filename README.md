@@ -3,34 +3,6 @@
 
 This repo is implementation for [PointNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) and [PointNet++](http://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space.pdf) in pytorch.
 
-### Run
-You can run different modes with following codes. 
-* If you want to use offline processing of data, you can use `--process_data` in the first run. You can download pre-processd data [here](https://drive.google.com/drive/folders/1_fBYbDO3XSdRt3DSbEBe41r5l9YpIGWF?usp=sharing) and save it in `data/modelnet40_normal_resampled/`.
-* If you want to train on ModelNet10, you can use `--num_category 10`.
-```shell
-# ModelNet40
-## Select different models in ./models 
-
-## e.g., pointnet2_ssg without normal features
-python train_classification.py --model pointnet2_cls_ssg --log_dir pointnet2_cls_ssg
-python test_classification.py --log_dir pointnet2_cls_ssg
-
-## e.g., pointnet2_ssg with normal features
-python train_classification.py --model pointnet2_cls_ssg --use_normals --log_dir pointnet2_cls_ssg_normal
-python test_classification.py --use_normals --log_dir pointnet2_cls_ssg_normal
-
-## e.g., pointnet2_ssg with uniform sampling
-python train_classification.py --model pointnet2_cls_ssg --use_uniform_sample --log_dir pointnet2_cls_ssg_fps
-python test_classification.py --use_uniform_sample --log_dir pointnet2_cls_ssg_fps
-
-# ModelNet10
-## Similar setting like ModelNet40, just using --num_category 10
-
-## e.g., pointnet2_ssg without normal features
-python train_classification.py --model pointnet2_cls_ssg --log_dir pointnet2_cls_ssg --num_category 10
-python test_classification.py --log_dir pointnet2_cls_ssg --num_category 10
-```
-
 ### Performance
 | Model | Accuracy |
 |--|--|
