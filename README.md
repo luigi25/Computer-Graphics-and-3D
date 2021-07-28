@@ -3,7 +3,9 @@
 
 This repo is implementation for [PointNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) and [PointNet++](http://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space.pdf) in pytorch.
 
+
 ### Performance
+
 | Model | Accuracy |
 |--|--|
 | PointNet (Official) |  89.2|
@@ -13,6 +15,14 @@ This repo is implementation for [PointNet](http://openaccess.thecvf.com/content_
 | PointNet2_SSG (Pytorch without normal) |  92.2|
 | PointNet2_SSG (Pytorch with normal) |  92.4|
 | PointNet2_MSG (Pytorch with normal) |  **92.8**|
+
+
+## Install
+
+The latest codes are tested on Ubuntu 16.04, CUDA10.1, PyTorch 1.6 and Python 3.7:
+```shell
+conda install pytorch==1.6.0 cudatoolkit=10.1 -c pytorch
+```
 
 ## Part Segmentation (ShapeNet)
 ### Data Preparation
