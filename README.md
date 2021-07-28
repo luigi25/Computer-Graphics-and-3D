@@ -1,11 +1,8 @@
 # Computer Graphics and 3D
 ## Pytorch Implementation PointNet++ 
-
 This repo is implementation for [PointNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) and [PointNet++](http://papers.nips.cc/paper/7095-pointnet-deep-hierarchical-feature-learning-on-point-sets-in-a-metric-space.pdf) in pytorch.
 
-
 ### Performance
-
 | Model | Accuracy |
 |--|--|
 | PointNet (Official) |  89.2|
@@ -16,9 +13,7 @@ This repo is implementation for [PointNet](http://openaccess.thecvf.com/content_
 | PointNet2_SSG (Pytorch with normal) |  92.4|
 | PointNet2_MSG (Pytorch with normal) |  **92.8**|
 
-
 ## Install
-
 The latest codes are tested on Ubuntu 16.04, CUDA10.1, PyTorch 1.6 and Python 3.7:
 ```shell
 conda install pytorch==1.6.0 cudatoolkit=10.1 -c pytorch
@@ -27,6 +22,7 @@ conda install pytorch==1.6.0 cudatoolkit=10.1 -c pytorch
 ## Part Segmentation (ShapeNet)
 ### Data Preparation
 Download alignment **ShapeNet** [here](https://shapenet.cs.stanford.edu/media/shapenetcore_partanno_segmentation_benchmark_v0_normal.zip)  and save in `data/shapenetcore_partanno_segmentation_benchmark_v0_normal/`.
+
 ### Run
 ```
 ## Check model in ./models 
@@ -34,6 +30,7 @@ Download alignment **ShapeNet** [here](https://shapenet.cs.stanford.edu/media/sh
 python train_partseg.py --model pointnet2_part_seg_msg --normal --log_dir pointnet2_part_seg_msg
 python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
 ```
+
 ### Performance
 | Model | Inctance avg IoU| Class avg IoU 
 |--|--|--|
@@ -43,7 +40,6 @@ python test_partseg.py --normal --log_dir pointnet2_part_seg_msg
 |PointNet2_SSG (Pytorch)|	84.9|	81.8	
 |PointNet2_MSG (Pytorch)|	**85.4**|	**82.5**	
 
-
 ## Semantic Segmentation (S3DIS)
 ### Data Preparation
 Download 3D indoor parsing dataset (**S3DIS**) [here](http://buildingparser.stanford.edu/dataset.html)  and save in `data/s3dis/Stanford3dDataset_v1.2_Aligned_Version/`.
@@ -52,6 +48,7 @@ cd data_utils
 python collect_indoor3d_data.py
 ```
 Processed data will save in `data/s3dis/stanford_indoor3d/`.
+
 ### Run
 ```
 ## Check model in ./models 
@@ -77,16 +74,15 @@ bash build.sh
 python show3d_balls.py
 ```
 ![](/visualizer/pic.png)
+
 ### Using MeshLab
 ![](/visualizer/pic2.png)
-
 
 ## Reference By
 [halimacc/pointnet3](https://github.com/halimacc/pointnet3)<br>
 [fxia22/pointnet.pytorch](https://github.com/fxia22/pointnet.pytorch)<br>
 [charlesq34/PointNet](https://github.com/charlesq34/pointnet) <br>
 [charlesq34/PointNet++](https://github.com/charlesq34/pointnet2)
-
 
 ## Citation
 If you find this repo useful in your research, please consider citing it and our other works:
@@ -114,10 +110,3 @@ If you find this repo useful in your research, please consider citing it and our
   year={2021}
 }
 ```
-
-## Selected Projects using This Codebase
-* [PointConv: Deep Convolutional Networks on 3D Point Clouds, CVPR'19](https://github.com/Young98CN/pointconv_pytorch)
-* [On Isometry Robustness of Deep 3D Point Cloud Models under Adversarial Attacks, CVPR'20](https://github.com/skywalker6174/3d-isometry-robust)
-* [Label-Efficient Learning on Point Clouds using Approximate Convex Decompositions, ECCV'20](https://github.com/matheusgadelha/PointCloudLearningACD)
-* [PCT: Point Cloud Transformer](https://github.com/MenghaoGuo/PCT)
-* [Point Sampling Net: Fast Subsampling and Local Grouping for Deep Learning on Point Cloud](https://github.com/psn-anonymous/PointSamplingNet)
