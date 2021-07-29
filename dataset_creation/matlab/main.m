@@ -4,7 +4,7 @@ files = {directory.name};
 count = 0;
 len = 0;
 % points_bs = 10923; % 1/3 num_points of FRGC_noLm_SLC
-points_bs = 9143; % min num_points bosphorus_noLm_SLC
+points_bs = 9143; % min num_points of bosphorus_noLm_SLC
 class = strings();
 for i = 1:length(files)
     file = char(files(i));
@@ -66,9 +66,7 @@ for i = 1:length(files)
         % writematrix(dataset, ['../3D_regMesh_FRGC_bosph/FRGC_noLm_SLC/dataset/' name], 'delimiter', ' ');
         writematrix(dataset, ['../3D_regMesh_FRGC_bosph/bosphorus_noLm_SLC/dataset/' name], 'delimiter', ' ');
         
-        
         disp('ok');
-        
         
     end
     % pause(10);
