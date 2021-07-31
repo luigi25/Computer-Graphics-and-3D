@@ -1,1 +1,0 @@
-file mat 3D_regMesh_FRGC
